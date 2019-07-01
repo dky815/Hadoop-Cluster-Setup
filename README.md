@@ -5,7 +5,7 @@
 搭建hadoop集群环境至少需要3个节点（也就是3台服务器设备）：1个Master，2个Slave。
 节点之间局域网连接，可以相互ping通，各节点IP如下：
 |    Hostname      |    IP      |    User      |    Password      | 
-|:----|:----|:----|:----|
+|:----:|:----:|:----:|:----:|
 |    16211109-master      |    10.251.254.87      |    root      |    098765      | 
 |    16211112-slave1      |    10.251.254.252      |    root      |    098765      | 
 |    16211130-slave2      |    10.251.254.250      |    root      |    098765      | 
@@ -24,8 +24,8 @@ Zookeeper ：zookeeper-3.4.5
 
 Hive ：hive-1.2.1-bin
 ## **1.3 计划的各节点角色及服务进程：**
-|    Hostname    |    IP    |    节点角色及进程    |    | 
-|:----:|:----:|:----|:----|
+|    Hostname    |    IP    |    节点角色及进程    | 
+|:----:|:----:|:----|
 |    16211109-master    |    10.251.254.87    | **Hadoop:** master(NameNode、SecondaryNameNode、ResourceManager) **ZooKeeper:** follower(QuorumPeerMain) **Hbase:** master(HMaster、HRegionServer)   |    | 
 |    16211112-slave1    |    10.251.254.252    | **Hadoop:** slave(DataNode、NodeManager)   **ZooKeeper:** follower(QuorumPeerMain) **Hbase:** slave(HRegionServer) |    | 
 |    16211130-slave2    |    10.251.254.250    | **Hadoop:** slave(DataNode、NodeManager)   **ZooKeeper:** leader(QuorumPeerMain) **Hbase:** slave(HRegionServer) |    | 
